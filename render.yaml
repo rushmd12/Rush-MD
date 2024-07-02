@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: Ethix-MD
+    name: Rush-MD
     env: node
     branch: main
-    repo: https://github.com/Ethix-Xsid/Ethix-MD.git
+    repo: https://github.com/rushmd12/Rush-MD.git
     buildCommand: npm install
     startCommand: npm start
     plan: free
