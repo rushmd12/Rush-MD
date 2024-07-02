@@ -71,12 +71,12 @@ const test = async (m, Matrix) => {
   const selectedId = selectedListId || selectedButtonId;
   
   const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '.';
-        const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
-        let ethix = {
+        const cmd = m.body.startsWith(prefix) ? m.body.Slice(prefix.length).toLowerCase() : '';
+        let Rush = {
     public: true // or false
 };
 
-let mode = ethix.public ? 'public' : 'private';
+let mode = Rush.public ? 'public' : 'private';
 
         const validCommands = ['list', 'help', 'menu'];
 
@@ -91,9 +91,9 @@ let mode = ethix.public ? 'public' : 'private';
           interactiveMessage: proto.Message.InteractiveMessage.create({
             body: proto.Message.InteractiveMessage.Body.create({
               text: `╭─────────────━┈⊷
-│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *ᴇᴛʜɪx-ᴍᴅ*
+│📸 𝔹𝕆𝕋 ℕ𝔸𝕄𝔼: *𝐑𝐔𝐒𝐇-ᴍᴅ*
 │📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *ᴇᴛʜɪx xsɪᴅ*      
+│👨‍💻 ᴏᴡɴᴇʀ : *𝐑𝐔𝐒𝐇 Sl*      
 │👤 ɴᴜᴍʙᴇʀ: 919142294671
 │📡 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
@@ -101,10 +101,10 @@ let mode = ethix.public ? 'public' : 'private';
 ╰─────────────━┈⊷ `
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "© Powered By Ethix-MD"
+              text: "© Powered By Rush-MD"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./src/ethix.jpg')}, { upload: Matrix.waUploadToServer})), 
+                ...(await prepareWAMessageMedia({ image : fs.readFileSync('./src/Rush.jpg')}, { upload: Matrix.waUploadToServer})), 
                   title: ``,
                   gifPlayback: true,
                   subtitle: "",
@@ -114,7 +114,7 @@ let mode = ethix.public ? 'public' : 'private';
               buttons: [
                 {
                   "name": "single_select",
-                  "buttonParamsJson": `{"title":"🔖𝚻𝚫𝚸 𝐅𝚯𝚪 𝚯𝚸𝚵𝚴 𝚳𝚵𝚴𝐔",
+                  "buttonParamsJson": `{"title":"🌈බොට්menu",
                  "sections":
                    [{
                     "title":"😎 𝛯𝑇𝛨𝛪𝛸-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
@@ -189,9 +189,9 @@ let mode = ethix.public ? 'public' : 'private';
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -208,9 +208,9 @@ let mode = ethix.public ? 'public' : 'private';
         const mode = process.env.MODE;
         const str = `hey ${m.pushName} ${pushwish}
 ╭─────────────━┈⊷
-│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *ᴇᴛʜɪx-ᴍᴅ*
+│🤖 𝔹𝕆𝕋 ℕ𝔸𝕄𝔼: *𝐑𝐔𝐒𝐇-ᴍᴅ*
 │📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *ᴇᴛʜɪx xsɪᴅ*      
+│👨‍💻 ᴏᴡɴᴇʀ : *𝐑𝐔𝐒𝐇 Sl*      
 │👤 ɴᴜᴍʙᴇʀ: 919142294671
 │💻 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
@@ -324,8 +324,8 @@ let mode = ethix.public ? 'public' : 'private';
             },
             message: {
                 contactMessage: {
-                    displayName: `Ethix-MD`,
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'Ethix-MD'\nitem1.TEL;waid=${
+                    displayName: `Rush-MD`,
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'Rush-MD'\nitem1.TEL;waid=${
                         m.sender.split("@")[0]
                     }:${
                         m.sender.split("@")[0]
@@ -334,15 +334,15 @@ let mode = ethix.public ? 'public' : 'private';
             }
         };
        let { key } = await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -373,15 +373,15 @@ let mode = ethix.public ? 'public' : 'private';
 ┃✰ ${prefix}𝚃𝚒𝚔𝚝𝚘𝚔
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -414,7 +414,7 @@ await Matrix.sendMessage(m.from, {
 ╰━━━━━━━━━━━━━━━⪼
      `
      await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
     mentionedJid: [m.sender], 
@@ -439,15 +439,15 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -478,15 +478,15 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -514,15 +514,15 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙻𝚢𝚛𝚒𝚌𝚜
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -542,15 +542,15 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙶𝚒𝚝𝚑𝚞𝚋𝚂𝚝𝚊𝚕𝚔
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -573,15 +573,15 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝚃𝚝𝚜
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -605,15 +605,15 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
@@ -638,15 +638,15 @@ await Matrix.sendMessage(m.from, {
 ╰━━━━━━━━━━━━━━━⪼
      `
      await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/ethix.jpg'), 
+  image: fs.readFileSync('./src/Rush.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                forwardedNewSletterMessageInfo: {
+                  newSletterJid: '120363249960769123@newSletter',
+                  newSletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
