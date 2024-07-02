@@ -12,7 +12,7 @@ const modeCommand = async (m, Matrix) => {
 
     if (cmd === 'mode') {
         if (!isCreator) {
-            await Matrix.sendMessage(m.from, { text: "*📛 THIS IS AN OWNER COMMAND*" }, { quoted: m });
+            await Matrix.sendMessage(m.from, { text: "*📛 owner ගේ command එකකි*" }, { quoted: m });
             return;
         }
 
@@ -27,7 +27,7 @@ const modeCommand = async (m, Matrix) => {
                 m.reply("Usage:\n.Mode public/private");
             }
         } else {
-            m.reply("Invalid mode. Please use 'public' or 'private'.");
+            m.reply("අවශය ලෙස වෙනස් කල හැක mode. Please use 'public' or 'private'.");
         }
     }
 };
