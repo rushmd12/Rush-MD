@@ -12,13 +12,13 @@ const alive = async (m, Matrix) => {
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
 
-  const uptimeMessage = `*🤖 ETHIX-MD Status Overview*
+  const uptimeMessage = `*📸 RUSH-MD Last vertion*
 _________________________________________
 
-*📆 ${days} Day*
-*🕰️ ${hours} Hour*
-*⏳ ${minutes} Minute*
-*⏲️ ${seconds} Second*
+*📆 ${days} දවස*
+*🕰️ ${hours} බොට් රන් වෙන පැය*
+*⏳ ${minutes} බොට් රන් වෙන මිනිත්තු*
+*⏲️ ${seconds} බොට් රන් වෙන තප්පර*
 _________________________________________
 `;
 
@@ -26,7 +26,7 @@ _________________________________________
         {
           "name": "quick_reply",
           "buttonParamsJson": JSON.stringify({
-            display_text: "MENU",
+            display_text: "මෙනුව",
             id: `.menu`
           })
         },
@@ -51,7 +51,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿"
+            text: "® Powered By 𝗥𝘂𝘀𝗵-𝗠𝗗 𝗼𝗻𝗹𝘆 𝗼𝘂𝗿 𝗰𝗼𝘂𝗻𝘁𝗿𝘆 𝗮𝗻𝗱 𝘃𝗲𝗿𝘆 𝘀𝗮𝗳𝗲"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -68,7 +68,7 @@ _________________________________________
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+                  newsletterName: "Rush-MD",
                   serverMessageId: 143
                 }
               }
