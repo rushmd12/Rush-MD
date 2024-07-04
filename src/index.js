@@ -115,7 +115,7 @@ async function start() {
         store?.bind(Matrix.ev);
 
         if (!Matrix.authState.creds.registered && isSessionPutted) {
-            const sessionID = config.SESSION_ID.split('Ethix-MD&')[1];
+            const sessionID = config.SESSION_ID.split('Rush-MD&')[1];
             const pasteUrl = `https://pastebin.com/raw/${sessionID}`;
             const response = await fetch(pasteUrl);
             const text = await response.text();
@@ -176,7 +176,7 @@ async function start() {
 
             if (connection === "open") {
                 if (initialConnection) {
-                    console.log(chalk.green("😃 Integration Successful️ ✅"));
+                    console.log(chalk.green("🇱🇰 රශ් බොට් connect උනා හලෝ රත්තරං දැම් බොට් වැඩ 🇱🇰"));
                     Matrix.sendMessage(Matrix.user.id, { text: `😃 Integration Successful️ ✅` });
                     initialConnection = false;
                 } else {
