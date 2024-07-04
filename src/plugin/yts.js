@@ -33,7 +33,7 @@ const song = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a YouTube URL or search query');
 
     try {
-      await m.React("🕘");
+      await m.React("🔍");
 
       // Search YouTube for the provided query
       const searchResult = await yts(text);
@@ -76,13 +76,13 @@ const song = async (m, Matrix) => {
             },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `𝞢𝙏𝞖𝞘𝞦-𝞛𝘿 Video Downloader\n\n`
+                text: `𝗥𝗨𝗦𝗛-𝗠𝗗 Video Downloader\n\n`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By Ethix-MD"
+                text: "® Powered By Rush-MD"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/fbbe1744668b44637c21a.jpg` } }, { upload: Matrix.waUploadToServer })),
+                ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/e1fd8689e69a7baa4920d.jpg` } }, { upload: Matrix.waUploadToServer })),
                 title: ``,
                 gifPlayback: true,
                 subtitle: "",
@@ -93,11 +93,11 @@ const song = async (m, Matrix) => {
                   {
                     name: "single_select",
                     buttonParamsJson: JSON.stringify({
-                      title: "🔖 Select a video",
+                      title: "🎥 අදල video තෝරන්න",
                       sections: [
                         {
-                          title: "😎 Top 10 YouTube Results - Videos",
-                          highlight_label: "🤩 Top 10",
+                          title: "🦄 Rush - Videos",
+                          highlight_label: "🦄 රශ්",
                           rows: videoButtons
                         },
                       ]
@@ -106,11 +106,11 @@ const song = async (m, Matrix) => {
                   {
                     name: "single_select",
                     buttonParamsJson: JSON.stringify({
-                      title: "🎧 Select an audio",
+                      title: "🎧 අදල audio තෝරන්න",
                       sections: [
                         {
-                          title: "🎶 Top 10 YouTube Results - Audios",
-                          highlight_label: "🤩 Top 10",
+                          title: "🎶 Rush - Audios",
+                          highlight_label: "🦄 රශ්",
                           rows: audioButtons
                         },
                       ]
@@ -161,7 +161,7 @@ const song = async (m, Matrix) => {
           const audioStream = ytdl(videoUrl, { filter: 'audioonly', quality: 'highestaudio' });
           const finalAudioBuffer = await streamToBuffer(audioStream);
           
-          await Matrix.sendMessage(m.from, { image: { url: thumbnailUrl }, caption: `Title: ${title}\nAuther: ${author}\nDuration: ${duration}\n> © Powered by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿`}, { quoted: m });
+          await Matrix.sendMessage(m.from, { image: { url: thumbnailUrl }, caption: `Title: ${title}\nAuther: ${author}\nDuration: ${duration}\n> ® Powered by 𝗥𝗨𝗦𝗛-𝗠𝗗`}, { quoted: m });
 
           await Matrix.sendMessage(m.from, { audio: finalAudioBuffer, mimetype: 'audio/mpeg' }, { quoted: m });
         } else {
@@ -169,7 +169,7 @@ const song = async (m, Matrix) => {
           const videoStream = ytdl(videoUrl, { filter: 'audioandvideo', quality: 'highest' });
           const finalVideoBuffer = await streamToBuffer(videoStream);
 
-          await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: `Title: ${title}\nAuther: ${author}\nDuration: ${duration}\n\n> Powered by Ethix-MD` }, { quoted: m });
+          await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: `Title: ${title}\nAuther: ${author}\nDuration: ${duration}\n\n> Powered by Rush-MD` }, { quoted: m });
         }
       } catch (error) {
         console.error("Error fetching video details:", error);
