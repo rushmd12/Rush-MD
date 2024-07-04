@@ -13,7 +13,7 @@ const unblock = async (m, gss) => {
 
     if (!validCommands.includes(cmd)) return;
     
-    if (!isCreator) return m.reply("*📛 THIS IS AN OWNER COMMAND*");
+    if (!isCreator) return m.reply("*⚙️ THIS IS AN OWNER COMMAND*");
 
     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
     
