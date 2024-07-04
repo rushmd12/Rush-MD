@@ -20,7 +20,7 @@ const shazam = async (m, gss) => {
     const quoted = m.quoted || {}; 
 
     if (!quoted || (quoted.mtype !== 'audioMessage' && quoted.mtype !== 'videoMessage')) {
-      return m.reply('You asked about music. Please provide a quoted audio or video message for identification.');
+      return m.reply('You asked about music. Please provide a quoted audio or video message for identification powerd by rush sever.');
     }
 
     const mime = m.quoted.mimetype;
