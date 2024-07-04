@@ -23,7 +23,7 @@ const tempMailCommand = async (m, Matrix) => {
 
     if (cmd === 'tempmail') {
         try {
-            await m.React("🕘");
+            await m.React("🔍");
 
             // Generate temporary email
             const genResponse = await fetch('https://tempmail.apinepdev.workers.dev/api/gen');
@@ -67,7 +67,7 @@ const tempMailCommand = async (m, Matrix) => {
                                 text: `Generated Temporary Email: ${tempEmail}`
                             }),
                             footer: proto.Message.InteractiveMessage.Footer.create({
-                                text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿"
+                                text: "මෙය බවිතා කිරීමක් නැත"
                             }),
                             header: proto.Message.InteractiveMessage.Header.create({
                                 title: "Temporary Email",
@@ -103,7 +103,7 @@ const tempMailCommand = async (m, Matrix) => {
         const email = selectedId.slice('check_inbox_'.length);
 
         try {
-            await m.React("🕘");
+            await m.React("💃");
 
             // Check inbox for the provided email
             const inboxResponse = await fetch(`https://tempmail.apinepdev.workers.dev/api/getmessage?email=${email}`);
@@ -155,7 +155,7 @@ const tempMailCommand = async (m, Matrix) => {
                                 text: inboxMessages
                             }),
                             footer: proto.Message.InteractiveMessage.Footer.create({
-                                text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿"
+                                text: "මෙය බාවිතා කිරීමක් නැත"
                             }),
                             header: proto.Message.InteractiveMessage.Header.create({
                                 title: "",
