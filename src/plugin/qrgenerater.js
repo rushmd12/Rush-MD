@@ -25,7 +25,7 @@ const toqr = async (m, gss) => {
 
     await gss.sendMessage(m.from, {
       image: medi,
-      caption: 'QR code generated successfully!\n\n> © Powered By Ethix-MD'
+      caption: 'QR code එකක් සැකසුනා නමුත් 2025 සිට qr සෙවයට pay කල යුතුයි!\n\n> ® Powered By Rush-MD'
     }, {
       quoted: m
     });
