@@ -64,7 +64,7 @@ async function start() {
 
         let { state, saveCreds } = await useMultiFileAuthState(sessionName);
         let { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(chalk.red("CODED BY GOUTAM KUMAR & Ethix-Xsid"));
+        console.log(chalk.red("CODED BY RUSH & Rush-MD"));
         console.log(chalk.green(`using WA v${version.join(".")}, isLatest: ${isLatest}`));
 
         const Device = (os.platform() === 'win32') ? 'Windows' : (os.platform() === 'darwin') ? 'MacOS' : 'Linux';
@@ -177,7 +177,7 @@ async function start() {
             if (connection === "open") {
                 if (initialConnection) {
                     console.log(chalk.green("🇱🇰 රශ් බොට් connect උනා හලෝ රත්තරං දැම් බොට් වැඩ 🇱🇰"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `😃 Integration Successful️ ✅` });
+                    Matrix.sendMessage(Matrix.user.id, { text: `🇱🇰 රශ් බොට් connect උනා හලෝ රත්තරං දැම් බොට් වැඩ 🇱🇰` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
