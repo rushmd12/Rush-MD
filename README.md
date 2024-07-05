@@ -1,4 +1,5 @@
-
+<p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=602&pause=1000&color=F70000&random=false&width=435&lines=RUSH-Md+made+by+RUSH+;රශ්+බොට්+සම්පූර්ණ+කර+ඇත+%40confronter._" alt="Typing SVG" /></a>
 
 ### 1. FORK THIS REPO
 
